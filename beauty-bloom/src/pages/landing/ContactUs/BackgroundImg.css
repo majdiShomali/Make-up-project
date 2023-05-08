@@ -1,0 +1,21 @@
+.landing-contact{
+    background-image: url(./imgContact/img1.png);
+    background-size: cover;
+    /* height: calc(100vh - 64px); */
+    height: 20rem;
+    width: 100%;
+    object-fit: fill;
+    display: flex;
+    text-align: center;
+ 
+}
+.landing-contact .intro-text{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center; 
+    color: white;
+    font-size: 3rem;
+    font-family: "italic", "Helvetica Neue", Helvetica, sans-serif;
+}

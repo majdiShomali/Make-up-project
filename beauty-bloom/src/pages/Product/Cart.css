@@ -1,0 +1,186 @@
+.containerCart{
+    display: flex;
+    width: 80%;
+    margin: 4rem auto;
+}
+.CartSection1{
+    margin-right: 5rem;
+    width: 65%;
+}
+
+.deletebutton{
+    background-color: rgb(211, 137, 137);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+.s1MyCart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CartProductInfo{
+    display: flex;
+}
+.CartProductInfo img{
+    width: 10rem;
+    border: 2px solid black;
+    margin-right: 0.5rem;
+}
+
+
+
+.CartProductInfoText p {
+    margin-bottom: 1rem;
+}
+.s1MyCartInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+    
+}
+
+.productCartQuantityC{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    height: 2rem;
+}
+
+
+.productCartQuantity{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0.5rem;
+}
+
+.productCartQuantity input {
+ width: 2rem;
+ height: 2rem;
+ border: 1px solid black;
+ text-align: center;
+}
+
+.productCartQuantity button {
+    width: 2rem;
+    height: 2rem;
+   text-align: center;
+   }
+   
+
+   .promeNote{
+    display: flex;
+    align-items: center;
+   }
+
+   .CartSection2{
+ width: 30%;
+   }
+
+   .CartSection2Price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+   }
+
+   .paymentButtons{
+    display: flex;
+    flex-direction: column;
+   }
+
+
+   .paymentButtons{
+    display: flex;
+    align-items: center;
+   }
+   .checkoutButton{
+    background-color: #96AC73;
+    margin: 0.5rem 0;
+    height: 3rem;
+    width: 70%;
+    border-radius: 0.5rem;
+    color: white;
+   }
+
+   .paypalButton{
+    background-color: #FFC439;
+    height: 3rem;
+    width: 70%;
+    border-radius: 0.5rem;
+    color: white;
+   }
+
+   .secureCheckout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+   }
+
+   .promeNoteC img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+   }
+
+   .priceCancel{
+    display: flex;
+    align-items: center;
+    width: 5rem;
+   }
+
+   .priceCancel p{
+    text-align: center;
+   }
+
+
+   @media (max-width: 600px){ 
+       .containerCart{
+        width: 100%;  
+        flex-direction: column;
+    }
+    .CartSection1{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .CartSection2{
+        width: 100%;
+    }
+
+
+    .productCartQuantityC{
+     flex-direction: column;
+    }
+
+    .CartProductInfo img{
+        width: 6rem;
+        height: 6rem;
+        margin-right: 0.2rem;
+    }
+
+    .CartProductInfoText p {
+        width: 5rem;
+        margin-bottom: 0.1rem;
+        font-size: small;
+     }
+
+     .s1MyCartInfo{
+        justify-content: c;
+        margin: 0.5rem 0;
+        
+    }
+
+    .CartSection2Price{
+        justify-content: space-around;
+    }
+    .CartSection2Price p{
+        text-align: center;
+    }
+    
+   }

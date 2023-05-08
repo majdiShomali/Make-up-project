@@ -1,0 +1,25 @@
+.TypeofContact{
+    background-color:#FD5A8B;
+    margin : 2rem 0rem;
+    color: azure;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  margin:0 auto;
+
+}
+.container .cardd {
+    display: flex;
+    align-items: center
+}
+.icon{
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+.container .cardd .text {
+    padding-left: 1rem;
+}
+

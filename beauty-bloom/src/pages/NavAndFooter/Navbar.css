@@ -1,0 +1,16 @@
+.liNav {
+       padding: 1rem;
+    }
+.buttonNav{
+    color: white;
+    border-radius: 0.5rem;
+    background-color:rgb(188,136,133) 
+
+
+
+}
+.buttonNav:hover{
+    background-color: transparent;
+    color: white;
+    background-color:rgb(212,152,202) ;
+}
