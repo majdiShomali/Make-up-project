@@ -35,7 +35,7 @@ export default function Signup() {
         
             if( validateName(name) && validatePassword(password) && validateEmail(email)&& validatePhone(phone) ){
             alert(`welcome ${name}`)
-            
+            window.location.replace("Login")
             let user={
                 username:name,
                 userPassword:password,

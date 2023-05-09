@@ -20,7 +20,7 @@ const Product = () => {
 
   updateValuePrice(product_Api.price);
 
-  function abyss(i) {
+  function ButtonOnClick(i) {
     setButtonId(i);
     setcolorButton("black");
   }
@@ -73,7 +73,7 @@ const Product = () => {
                 return (
                   <button
                     style={{ backgroundColor: product_Api.colors[i].hex_value }}
-                    onClick={() => abyss(i)}
+                    onClick={() => ButtonOnClick(i)}
                   ></button>
                 );
               })}

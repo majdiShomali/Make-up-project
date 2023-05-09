@@ -88,6 +88,8 @@ const {signState,updatesignState } = useContext(UserContext);
                             let userdata = get_info(res.data.email);
                             alert(userdata.userEmail);
                             alert("welcome");
+                            window.location.replace("Landing")
+
                         }else{
                             alert('the email '+res.data.email +' not registered before.');
                         }

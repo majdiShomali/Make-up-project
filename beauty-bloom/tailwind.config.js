@@ -33,5 +33,5 @@ module.exports = withMT({
   daisyui: {
     themes: false,
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"),require('@tailwindcss/forms')],
 });

@@ -4,6 +4,7 @@ import "./Cart.css";
 
 import { useContext } from "react";
 import { UserContext } from "./ProductContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 
@@ -37,18 +38,18 @@ const Cart = () => {
 
      let newArrQuantity = [...Quantity]; 
      newArrQuantity[i] = Number( ev.target.value);
-     setQuantity(newArrQuantity);
+     setQuantity(()=>newArrQuantity);
 
      let newArrPriceTotal = [...priceTotal]; 
      newArrPriceTotal[i] = Number(ev.target.value)*Number(pr);
-     setPriceTotal(newArrPriceTotal);
+     setPriceTotal(()=>newArrPriceTotal);
 
      let newArrPriceTotalNum =[...priceTotal];
      let sum=0
      newArrPriceTotalNum.map((element)=>{
       sum += element    
      })
-     setPriceTotalNum(sum)
+     setPriceTotalNum(()=>sum)
   }
 
 
@@ -200,7 +201,7 @@ const Cart = () => {
           </div>
 
           <div className="paymentButtons">
-            <button className="checkoutButton">checkout</button>
+          <Link to="/Checkout"> <button className="checkoutButton ">checkout</button></Link> 
             <button className="paypalButton">
               <span style={{ color: "#003087" }}>pay</span>
               <span style={{ color: "#009CDE" }}>pal</span> checkout
