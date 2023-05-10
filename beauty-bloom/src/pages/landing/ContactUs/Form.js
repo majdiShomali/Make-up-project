@@ -13,19 +13,20 @@ const Form = () => {
   if (submitted) {
     return (
       <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We'll be in touch soon.</div>
+        <div className="text-4xl text-center">Thank you!</div>
+        <div className="text-md text-center mb-5">We'll be in touch soon.</div>
       </>
     );
   }
 
   return (
-    <div className="bg-[#fbcfe8] py-5">
+    <div className="bg-[#eaa5b7] py-5">
     <form
       action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
       method="POST"
-      className="mx-5 bg-[#fbcfe8]"
+      target="_blank"
+      className="mx-5 bg-[#eaa5b7]"
     >
         <h1 className="text-4xl mb-3 text-center text-white">keep in touch with us</h1>
       <div className="flex">

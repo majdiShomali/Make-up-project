@@ -5,22 +5,32 @@ import "./Cart.css";
 import { useContext } from "react";
 import { UserContext } from "./ProductContext";
 import { Link } from "react-router-dom";
+let numarray0=[]
+let newArrPriceTotal=[]
 
 const Cart = () => {
 
   const {myArray,updateApi1 } = useContext(UserContext);
-
- 
-
   const [Quantity, setQuantity] = useState([]);
   const [priceTotal, setPriceTotal] = useState([]);
   const [priceTotalNum, setPriceTotalNum] = useState(0);
-
+ 
   useEffect(() => {
+     numarray0=myArray.map(() => {
+      return 1
+    });
+    newArrPriceTotal=myArray.map((e) => {
+      return Number(e.price)
+    });
 
+ 
 
     let numarray = myArray.map(() => {
       return 1
+    });
+
+    let numarrayprice = myArray.map((e) => {
+      return Number(e.price)
     });
 
     setQuantity(()=>{
@@ -28,9 +38,20 @@ const Cart = () => {
     })
 
     setPriceTotal(()=>{
-      return numarray
+      return numarrayprice
     })
 
+
+
+  
+   
+    let sum=0
+    newArrPriceTotal.map((element)=>{
+     sum += element    
+    })
+    setPriceTotalNum(sum)
+
+    
   },[]);
  
 
@@ -38,43 +59,55 @@ const Cart = () => {
 
      let newArrQuantity = [...Quantity]; 
      newArrQuantity[i] = Number( ev.target.value);
-     setQuantity(()=>newArrQuantity);
+     setQuantity(()=> {return newArrQuantity});
 
-     let newArrPriceTotal = [...priceTotal]; 
+     numarray0[i] = Number( ev.target.value);
+
      newArrPriceTotal[i] = Number(ev.target.value)*Number(pr);
-     setPriceTotal(()=>newArrPriceTotal);
+     setPriceTotal(()=> {return newArrPriceTotal});
 
-     let newArrPriceTotalNum =[...priceTotal];
+     
      let sum=0
+     let newArrPriceTotalNum =[...priceTotal];
+     
      newArrPriceTotalNum.map((element)=>{
       sum += element    
      })
-     setPriceTotalNum(()=>sum)
+     setPriceTotalNum(()=> {return sum})
+
   }
 
 
 
 
+ function removeItem(i,name,tPrice,Q){
+  
+//   useEffect(() => {
+//     setQuantity((prevData) => {
+//       prevData.splice(i, 1);
+//       console.log(prevData)
+//       return prevData
+//     }); 
+// },[]);
+
+  setPriceTotal((prevData) => {
+    const newData = prevData.filter(
+      (data) => data !== tPrice
+
+
+
+      
+    );
+    return newData
+  });
 
   
-
-
-  
-
-
-
-
-
-
- function removeItem(i,name){
-  console.log(name)
   updateApi1((prevData) => {
     const newData = prevData.filter(
       (data) => data.name !== name
     );
     return newData
   });
-
  }
 
   return (
@@ -121,9 +154,9 @@ const Cart = () => {
 
               <div className="priceCancel">
                 <p>
-                  $<span>{e.price * Number(Quantity[i])}</span>
+                  $<span>{e.price*Number(Quantity[i])}</span>
                 </p>
-                <button className="deletebutton" onClick={()=>removeItem(i,e.name)}>X</button>
+                <button className="deletebutton" onClick={()=>removeItem(i,e.name,e.price*Number(Quantity[i]),Quantity)  }>X</button>
               </div>
             </div>
           </div>
